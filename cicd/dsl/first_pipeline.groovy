@@ -10,7 +10,7 @@ pipelineJob('Hello-World') {
           }
         }
       }
-	  scriptPath('groovy/Hello-World.groovy')
+	  scriptPath('cicd/groovy/Hello-World.groovy')
     }
   }
 }

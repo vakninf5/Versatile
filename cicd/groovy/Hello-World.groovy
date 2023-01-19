@@ -5,12 +5,10 @@ pipeline {
         stage('Hello, World!') {
             steps {
                 script {
-                    timestamps {
-                        script {
-                             sh"""
-                                echo "Hello, World!" 
-                            """
-                        }
+                    script {
+                            sh"""
+                            echo "Hello, World!" 
+                        """
                     }
                 }
             }
