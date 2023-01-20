@@ -24,10 +24,11 @@ pipeline {
 						env.ENVIRONMENT = 'staging'
 					}
 					sh """
-						echo "Hello, World!"
+						echo "Starting Terraform init"
+						terraform init
+						terraform plan -out myplan
 					"""
-					// sh 'terraform init'
-					// sh 'terraform plan -out myplan'
+
 				}
 			}
 		}
