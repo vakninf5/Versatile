@@ -4,5 +4,5 @@ from hello_world import views
 
 
 urlpatterns = [
-    path('', views.index, name='index')
+    path('', views.get_name, name='get_name')
 ]
