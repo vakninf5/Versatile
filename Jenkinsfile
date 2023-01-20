@@ -3,6 +3,7 @@
 
 pipeline {
 	environment {
+      branch = ${env.GIT_BRANCH}
       evni = ${env.ENVIRONMENT}
 	}
 
