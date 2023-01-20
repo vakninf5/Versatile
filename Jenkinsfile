@@ -2,9 +2,11 @@
 
 
 pipeline {
+	agent any
+
 	environment {
-      branch = ${env.GIT_BRANCH}
-      evni = ${env.ENVIRONMENT}
+      branch = "${env.GIT_BRANCH}"
+      evni = "${env.ENVIRONMENT}"
 	}
 
 	options {
