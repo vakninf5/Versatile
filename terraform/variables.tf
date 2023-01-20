@@ -1,11 +1,12 @@
+#paramatized
 variable "aws_region" {
   description = "The AWS region to create things in."
-  default     = "us-east-1"
+  default     = "eu-west-3"
 }
 
 variable "key_name" {
   description = " SSH keys to connect to ec2 instance"
-  default     = "n_virginia_key"
+  default     = "mac_23"
 }
 
 variable "instance_type" {
@@ -15,31 +16,34 @@ variable "instance_type" {
 
 variable "security_group" {
   description = "Name of security group"
-  default     = "security_jenkins_grp"
+  default     = "launch-wizard-1"
 }
 
+#paramatized
 variable "tag_name" {
   description = "Tag Name of for Ec2 instance"
   default     = "my-Terraform_ec2-instance"
 }
+
 variable "ami_id" {
   description = "AMI for Ubuntu Ec2 instance"
-  default     = "ami-0022f774911c1d690"
+  default     = "ami-0a89a7563fc68be84"
 }
 
-
 variable "vpc-cidr" {
-  default     = "10.0.0.0/16"
+  default     = "172.31.0.0/16"
   description = "VPC CIDR BLOCK"
   type        = string
 }
+
 variable "Public_Subnet_1" {
-  default     = "10.0.0.0/24"
+  default     = "172.31.0.0/20"
   description = "Public_Subnet_1"
   type        = string
 }
-variable "Private_Subnet_1" {
-  default     = "10.0.2.0/24"
-  description = "Private_Subnet_1"
+
+variable "vpc_id" {
+  default     = "vpc-72e11d1a"
+  description = "vpc_id"
   type        = string
 }
