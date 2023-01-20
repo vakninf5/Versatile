@@ -11,7 +11,7 @@ pipeline {
 
 	options {
 		timestamps()
-		lock(evni)
+		// lock(evni)
 	}
 
 	stages {
