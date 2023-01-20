@@ -15,6 +15,7 @@ created a seed jobs that monitores DSL's
 implemented github credentials in jenkins
 initiated aws-cli
 installed docker on the main machine
+created django app
 
 
 
