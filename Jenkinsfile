@@ -21,8 +21,9 @@ pipeline {
 					} else {
 						env.ENVIRONMENT = 'staging'
 					}
-					sh 'terraform init'
-					sh 'terraform plan -out myplan'
+               sh "echo "Hello, World!""
+					// sh 'terraform init'
+					// sh 'terraform plan -out myplan'
 				}
 			}
 		}
