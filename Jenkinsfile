@@ -21,16 +21,20 @@ pipeline {
 					} else {
 						env.ENVIRONMENT = 'staging'
 					}
-               sh "echo "Hello, World!""
+					sh """
+						echo "Hello, World!"
+					"""
 					// sh 'terraform init'
 					// sh 'terraform plan -out myplan'
 				}
 			}
 		}
 
-		stage('Test') {
+		stage('Test') {	
 			steps {
-				sh "echo "Hello, World!""
+				sh """
+					echo "Hello, World!"
+				"""
 			}
 		}
 
