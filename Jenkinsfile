@@ -3,13 +3,11 @@
 
 pipeline {
 	environment {
-
+      evni = ${env.ENVIRONMENT}
 	}
 
 	options {
-		ansiColor('xterm')
 		timestamps()
-		timeout(time: 15, unit: 'MINUTES')
 		lock(land)
 	}
 
@@ -30,13 +28,13 @@ pipeline {
 
 		stage('Test') {
 			steps {
-				// test steps here
+				sh "echo "Hello, World!""
 			}
 		}
 
 		stage('Deploy') {
 			steps {
-				sh "terraform apply -var 'environment=${env.ENVIRONMENT}' -var 'tag_name=${env.GIT_BRANCH}'"
+				sh "terraform apply -var 'environment=${evni}' -var 'tag_name=${env.GIT_BRANCH}'"
 			}
 		}
 
