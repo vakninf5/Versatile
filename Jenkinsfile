@@ -8,7 +8,7 @@ pipeline {
 
 	options {
 		timestamps()
-		lock(land)
+		lock(evni)
 	}
 
 	stages {
